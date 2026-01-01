@@ -1,0 +1,441 @@
+/* =========================================
+   Matrix Theme
+   Classic green phosphor terminal aesthetic
+   ========================================= */
+
+/* Matrix Color Palette */
+:root {
+    --matrix-bg: #000000;
+    --matrix-primary: #00FF41;
+    --matrix-secondary: #008F11;
+    --matrix-accent: #00FF41;
+    --matrix-grid: #003B00;
+    --matrix-glow: rgba(0, 255, 65, 0.8);
+    --matrix-dark-green: #001A00;
+}
+
+/* Matrix Body */
+.theme-matrix {
+    background: #000000;
+    color: var(--matrix-primary);
+    font-family: 'Courier New', monospace;
+}
+
+/* Matrix Digital Rain Background */
+.theme-matrix::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(transparent 50%, rgba(0, 255, 65, 0.03) 50%),
+        linear-gradient(90deg, transparent 50%, rgba(0, 255, 65, 0.03) 50%);
+    background-size: 2px 2px, 2px 2px;
+    pointer-events: none;
+    z-index: -1;
+    animation: matrix-rain 20s linear infinite;
+}
+
+@keyframes matrix-rain {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 0 100px, 100px 0;
+    }
+}
+
+/* Matrix Cards */
+.theme-matrix .card {
+    background: rgba(0, 26, 0, 0.95) !important;
+    border: 2px solid var(--matrix-primary) !important;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.3),
+        inset 0 0 20px rgba(0, 255, 65, 0.05);
+    font-family: 'Courier New', monospace;
+}
+
+.theme-matrix .card:hover {
+    box-shadow: 
+        0 0 30px rgba(0, 255, 65, 0.5),
+        inset 0 0 30px rgba(0, 255, 65, 0.1);
+    border-color: var(--matrix-accent);
+}
+
+/* Matrix Card Headers */
+.theme-matrix .card-header {
+    background: var(--matrix-dark-green) !important;
+    border-bottom: 2px solid var(--matrix-primary) !important;
+    color: var(--matrix-primary) !important;
+    text-shadow: 0 0 10px var(--matrix-glow);
+    font-family: 'Courier New', monospace !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.theme-matrix .card-body {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Matrix Headers */
+.theme-matrix h1,
+.theme-matrix h2,
+.theme-matrix h3,
+.theme-matrix h4 {
+    color: var(--matrix-primary);
+    text-shadow: 
+        0 0 10px var(--matrix-glow),
+        0 0 20px var(--matrix-glow);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+    animation: matrix-flicker 3s ease-in-out infinite;
+}
+
+@keyframes matrix-flicker {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 
+            0 0 10px var(--matrix-glow),
+            0 0 20px var(--matrix-glow);
+    }
+    50% {
+        opacity: 0.95;
+        text-shadow: 
+            0 0 5px var(--matrix-glow),
+            0 0 10px var(--matrix-glow);
+    }
+}
+
+/* Matrix Buttons */
+.theme-matrix button {
+    background: transparent !important;
+    border: 2px solid var(--matrix-primary) !important;
+    color: var(--matrix-primary) !important;
+    font-family: 'Courier New', monospace !important;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--matrix-glow);
+    box-shadow: 
+        0 0 15px rgba(0, 255, 65, 0.3),
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.theme-matrix button::before {
+    content: ">";
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.theme-matrix button:hover::before {
+    opacity: 1;
+    left: 15px;
+}
+
+.theme-matrix button:hover {
+    background: rgba(0, 255, 65, 0.1) !important;
+    box-shadow: 
+        0 0 25px rgba(0, 255, 65, 0.5),
+        inset 0 0 20px rgba(0, 255, 65, 0.2);
+    text-shadow: 0 0 10px var(--matrix-glow);
+}
+
+.theme-matrix button:active {
+    background: rgba(0, 255, 65, 0.2) !important;
+}
+
+/* Matrix Inputs */
+.theme-matrix input {
+    background: var(--matrix-bg) !important;
+    border: 2px solid var(--matrix-primary) !important;
+    color: var(--matrix-primary) !important;
+    font-family: 'Courier New', monospace !important;
+    box-shadow: 
+        inset 0 0 10px rgba(0, 255, 65, 0.2),
+        0 0 5px rgba(0, 255, 65, 0.3);
+    text-shadow: 0 0 3px var(--matrix-glow);
+}
+
+.theme-matrix input:focus {
+    border-color: var(--matrix-accent) !important;
+    box-shadow: 
+        inset 0 0 15px rgba(0, 255, 65, 0.3),
+        0 0 15px rgba(0, 255, 65, 0.5);
+    outline: none;
+}
+
+.theme-matrix input::placeholder {
+    color: var(--matrix-secondary);
+    opacity: 0.6;
+}
+
+/* Matrix Sliders */
+.theme-matrix .rc-slider-track {
+    background: var(--matrix-primary) !important;
+    box-shadow: 0 0 10px var(--matrix-glow);
+    height: 4px !important;
+}
+
+.theme-matrix .rc-slider-rail {
+    background: var(--matrix-grid) !important;
+    height: 4px !important;
+}
+
+.theme-matrix .rc-slider-handle {
+    border: 3px solid var(--matrix-primary) !important;
+    background: var(--matrix-bg) !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: -7px !important;
+    box-shadow: 0 0 15px var(--matrix-glow);
+}
+
+.theme-matrix .rc-slider-handle:hover {
+    box-shadow: 0 0 25px var(--matrix-glow);
+}
+
+.theme-matrix .rc-slider-mark-text {
+    color: var(--matrix-primary) !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 10px !important;
+    text-shadow: 0 0 3px var(--matrix-glow);
+}
+
+.theme-matrix .rc-slider-mark-text-active {
+    color: var(--matrix-accent) !important;
+    font-weight: bold !important;
+}
+
+/* Matrix Tabs */
+.theme-matrix .tab {
+    background: var(--matrix-dark-green) !important;
+    color: var(--matrix-secondary) !important;
+    border: 1px solid var(--matrix-grid) !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+.theme-matrix .tab:hover {
+    background: rgba(0, 255, 65, 0.1) !important;
+    color: var(--matrix-primary) !important;
+}
+
+.theme-matrix .tab--selected {
+    background: var(--matrix-bg) !important;
+    color: var(--matrix-primary) !important;
+    border-bottom: 3px solid var(--matrix-primary) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 5px var(--matrix-glow);
+}
+
+/* Matrix Terminal Cursor */
+.theme-matrix .cursor::after {
+    content: "█";
+    animation: matrix-cursor-blink 1s infinite;
+    color: var(--matrix-primary);
+    text-shadow: 0 0 5px var(--matrix-glow);
+}
+
+@keyframes matrix-cursor-blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Matrix Links */
+.theme-matrix a {
+    color: var(--matrix-primary);
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--matrix-glow);
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.theme-matrix a:hover {
+    color: var(--matrix-accent);
+    text-shadow: 0 0 10px var(--matrix-glow);
+    text-decoration: underline;
+}
+
+/* Matrix Borders */
+.theme-matrix hr {
+    border: none;
+    height: 1px;
+    background: var(--matrix-primary);
+    box-shadow: 0 0 5px var(--matrix-glow);
+}
+
+/* Matrix Code Blocks */
+.theme-matrix code {
+    background: var(--matrix-dark-green);
+    color: var(--matrix-primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--matrix-grid);
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 3px var(--matrix-glow);
+}
+
+.theme-matrix pre {
+    background: var(--matrix-dark-green);
+    border: 2px solid var(--matrix-primary);
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1);
+}
+
+/* Matrix Tables */
+.theme-matrix table {
+    border: 2px solid var(--matrix-primary);
+    border-collapse: collapse;
+}
+
+.theme-matrix table th,
+.theme-matrix table td {
+    border: 1px solid var(--matrix-primary);
+    padding: 10px;
+    color: var(--matrix-primary);
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 3px var(--matrix-glow);
+}
+
+.theme-matrix table th {
+    background: var(--matrix-dark-green);
+    font-weight: bold;
+}
+
+.theme-matrix table tr:hover {
+    background: rgba(0, 255, 65, 0.1);
+}
+
+/* Matrix Dropdown */
+.theme-matrix .Select-control {
+    background: var(--matrix-bg) !important;
+    border: 2px solid var(--matrix-primary) !important;
+}
+
+.theme-matrix .Select-menu-outer {
+    background: var(--matrix-dark-green) !important;
+    border: 2px solid var(--matrix-primary) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.theme-matrix .Select-option {
+    background: var(--matrix-dark-green) !important;
+    color: var(--matrix-primary) !important;
+    font-family: 'Courier New', monospace !important;
+}
+
+.theme-matrix .Select-option:hover {
+    background: rgba(0, 255, 65, 0.2) !important;
+}
+
+.theme-matrix .Select-option.is-selected {
+    background: rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Matrix Loading */
+.theme-matrix .loading-spinner {
+    border-color: var(--matrix-grid);
+    border-top-color: var(--matrix-primary);
+    box-shadow: 0 0 10px var(--matrix-glow);
+}
+
+/* Matrix Scanlines */
+.theme-matrix .scanlines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+/* Matrix Glitch Text */
+.theme-matrix .matrix-glitch {
+    position: relative;
+    animation: matrix-text-glitch 5s infinite;
+}
+
+@keyframes matrix-text-glitch {
+    0%, 90%, 100% {
+        text-shadow: 
+            0 0 10px var(--matrix-glow),
+            0 0 20px var(--matrix-glow);
+    }
+    92%, 96% {
+        text-shadow: 
+            2px 0 var(--matrix-primary),
+            -2px 0 var(--matrix-secondary);
+    }
+}
+
+/* Matrix Scrollbar */
+.theme-matrix ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.theme-matrix ::-webkit-scrollbar-track {
+    background: var(--matrix-dark-green);
+}
+
+.theme-matrix ::-webkit-scrollbar-thumb {
+    background: var(--matrix-primary);
+    box-shadow: 0 0 5px var(--matrix-glow);
+}
+
+.theme-matrix ::-webkit-scrollbar-thumb:hover {
+    background: var(--matrix-accent);
+    box-shadow: 0 0 10px var(--matrix-glow);
+}
+
+/* Matrix Power Indicator */
+.theme-matrix .power-on {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--matrix-primary);
+    box-shadow: 
+        0 0 10px var(--matrix-glow),
+        0 0 20px var(--matrix-glow);
+    animation: matrix-pulse 2s ease-in-out infinite;
+}
+
+@keyframes matrix-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 5px var(--matrix-glow),
+            0 0 10px var(--matrix-glow);
+    }
+    50% {
+        box-shadow: 
+            0 0 10px var(--matrix-glow),
+            0 0 20px var(--matrix-glow),
+            0 0 30px var(--matrix-glow);
+    }
+}
+
+/* Matrix Terminal Prompt */
+.theme-matrix .terminal-prompt::before {
+    content: "root@quantum:~$ ";
+    color: var(--matrix-primary);
+    text-shadow: 0 0 5px var(--matrix-glow);
+    font-family: 'Courier New', monospace;
+}
