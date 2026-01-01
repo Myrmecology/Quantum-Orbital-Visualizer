@@ -10,7 +10,7 @@ This module contains:
 - Gamification and challenges
 - Dash callbacks for interactivity
 
-Author: Your Name
+Author: Justin D
 Version: 0.1.0
 """
 
@@ -69,4 +69,4 @@ __all__ = [
 ]
 
 __version__ = '0.1.0'
-__author__ = 'Your Name'
+__author__ = 'Justin D'

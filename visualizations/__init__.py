@@ -10,7 +10,7 @@ This module contains:
 - Theme management and styling
 - Vectrex-style retro graphics
 
-Author: Your Name
+Author: Justin D
 Version: 0.1.0
 """
 
@@ -73,4 +73,4 @@ __all__ = [
 ]
 
 __version__ = '0.1.0'
-__author__ = 'Your Name'
+__author__ = 'Justin D'

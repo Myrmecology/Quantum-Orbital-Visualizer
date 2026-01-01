@@ -9,7 +9,7 @@ Run tests with:
     pytest tests/test_quantum_engine.py -v
     pytest tests/test_visualizations.py -v
 
-Author: Your Name
+Author: Justin D
 Version: 0.1.0
 """
 
@@ -20,7 +20,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 __version__ = '0.1.0'
-__author__ = 'Your Name'
+__author__ = 'Justin D'
 
 # Test configuration
 TEST_GRID_POINTS = 30  # Use smaller grid for faster tests
