@@ -1,0 +1,363 @@
+/* =========================================
+   Quantum Lab Theme
+   Clean scientific white background
+   ========================================= */
+
+/* Quantum Lab Color Palette */
+:root {
+    --quantum-lab-bg: #F8F9FA;
+    --quantum-lab-primary: #0077B6;
+    --quantum-lab-secondary: #00B4D8;
+    --quantum-lab-accent: #90E0EF;
+    --quantum-lab-grid: #CAF0F8;
+    --quantum-lab-dark: #023E8A;
+    --quantum-lab-text: #03045E;
+}
+
+/* Quantum Lab Body */
+.theme-quantum-lab {
+    background: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 100%);
+    color: var(--quantum-lab-text);
+}
+
+/* Quantum Lab Cards */
+.theme-quantum-lab .card {
+    background: #FFFFFF !important;
+    border: 2px solid var(--quantum-lab-primary) !important;
+    box-shadow: 
+        0 4px 12px rgba(0, 119, 182, 0.15),
+        0 2px 4px rgba(0, 119, 182, 0.1);
+    border-radius: 8px;
+}
+
+.theme-quantum-lab .card:hover {
+    box-shadow: 
+        0 8px 24px rgba(0, 119, 182, 0.25),
+        0 4px 8px rgba(0, 119, 182, 0.15);
+    border-color: var(--quantum-lab-secondary);
+    transform: translateY(-2px);
+}
+
+/* Quantum Lab Card Headers */
+.theme-quantum-lab .card-header {
+    background: linear-gradient(135deg, var(--quantum-lab-primary), var(--quantum-lab-secondary)) !important;
+    border-bottom: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.theme-quantum-lab .card-body {
+    background: #FFFFFF !important;
+    padding: 20px;
+}
+
+/* Quantum Lab Headers */
+.theme-quantum-lab h1,
+.theme-quantum-lab h2,
+.theme-quantum-lab h3,
+.theme-quantum-lab h4 {
+    color: var(--quantum-lab-primary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.theme-quantum-lab h1 {
+    text-shadow: 2px 2px 4px rgba(0, 119, 182, 0.1);
+}
+
+/* Quantum Lab Buttons */
+.theme-quantum-lab button {
+    background: linear-gradient(135deg, var(--quantum-lab-primary), var(--quantum-lab-secondary)) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 119, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+.theme-quantum-lab button:hover {
+    background: linear-gradient(135deg, var(--quantum-lab-dark), var(--quantum-lab-primary)) !important;
+    box-shadow: 0 4px 16px rgba(0, 119, 182, 0.4);
+    transform: translateY(-2px);
+}
+
+.theme-quantum-lab button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 119, 182, 0.3);
+}
+
+/* Quantum Lab Inputs */
+.theme-quantum-lab input {
+    background: #FFFFFF !important;
+    border: 2px solid var(--quantum-lab-grid) !important;
+    color: var(--quantum-lab-text) !important;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.theme-quantum-lab input:focus {
+    border-color: var(--quantum-lab-primary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+    outline: none;
+}
+
+.theme-quantum-lab input::placeholder {
+    color: #ADB5BD;
+}
+
+/* Quantum Lab Sliders */
+.theme-quantum-lab .rc-slider-track {
+    background: linear-gradient(90deg, var(--quantum-lab-primary), var(--quantum-lab-secondary)) !important;
+    height: 6px !important;
+}
+
+.theme-quantum-lab .rc-slider-rail {
+    background: var(--quantum-lab-grid) !important;
+    height: 6px !important;
+}
+
+.theme-quantum-lab .rc-slider-handle {
+    border: 3px solid var(--quantum-lab-primary) !important;
+    background: #FFFFFF !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: -7px !important;
+    box-shadow: 0 2px 8px rgba(0, 119, 182, 0.3);
+}
+
+.theme-quantum-lab .rc-slider-handle:hover {
+    border-color: var(--quantum-lab-secondary) !important;
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.4);
+}
+
+.theme-quantum-lab .rc-slider-handle:active {
+    border-color: var(--quantum-lab-dark) !important;
+}
+
+.theme-quantum-lab .rc-slider-mark-text {
+    color: var(--quantum-lab-text) !important;
+    font-size: 11px !important;
+    font-weight: 500;
+}
+
+.theme-quantum-lab .rc-slider-mark-text-active {
+    color: var(--quantum-lab-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Quantum Lab Tabs */
+.theme-quantum-lab .tab {
+    background: #E9ECEF !important;
+    color: var(--quantum-lab-text) !important;
+    border: 1px solid #DEE2E6 !important;
+    font-weight: 500;
+}
+
+.theme-quantum-lab .tab:hover {
+    background: #DEE2E6 !important;
+    color: var(--quantum-lab-primary) !important;
+}
+
+.theme-quantum-lab .tab--selected {
+    background: #FFFFFF !important;
+    color: var(--quantum-lab-primary) !important;
+    border-bottom: 3px solid var(--quantum-lab-primary) !important;
+    font-weight: 600;
+}
+
+/* Quantum Lab Dropdowns */
+.theme-quantum-lab .Select-control {
+    background: #FFFFFF !important;
+    border: 2px solid var(--quantum-lab-grid) !important;
+}
+
+.theme-quantum-lab .Select-menu-outer {
+    background: #FFFFFF !important;
+    border: 2px solid var(--quantum-lab-primary) !important;
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.15);
+}
+
+.theme-quantum-lab .Select-option {
+    background: #FFFFFF !important;
+    color: var(--quantum-lab-text) !important;
+}
+
+.theme-quantum-lab .Select-option:hover {
+    background: var(--quantum-lab-accent) !important;
+    color: var(--quantum-lab-dark) !important;
+}
+
+.theme-quantum-lab .Select-option.is-selected {
+    background: var(--quantum-lab-primary) !important;
+    color: #FFFFFF !important;
+}
+
+/* Quantum Lab Radio Buttons */
+.theme-quantum-lab .radio-items label {
+    color: var(--quantum-lab-text) !important;
+    font-weight: 500;
+}
+
+.theme-quantum-lab .radio-items input[type="radio"]:checked + label {
+    color: var(--quantum-lab-primary) !important;
+    font-weight: 600;
+}
+
+/* Quantum Lab Links */
+.theme-quantum-lab a {
+    color: var(--quantum-lab-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.theme-quantum-lab a:hover {
+    color: var(--quantum-lab-secondary);
+    text-decoration: underline;
+}
+
+/* Quantum Lab Borders */
+.theme-quantum-lab hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--quantum-lab-primary),
+        transparent
+    );
+    margin: 20px 0;
+}
+
+/* Quantum Lab Labels */
+.theme-quantum-lab label {
+    color: var(--quantum-lab-text);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Quantum Lab Tables */
+.theme-quantum-lab table {
+    background: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.theme-quantum-lab table th {
+    background: var(--quantum-lab-primary);
+    color: #FFFFFF;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.theme-quantum-lab table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--quantum-lab-grid);
+    color: var(--quantum-lab-text);
+}
+
+.theme-quantum-lab table tr:hover {
+    background: var(--quantum-lab-accent);
+}
+
+/* Quantum Lab Badges */
+.theme-quantum-lab .badge {
+    background: var(--quantum-lab-primary);
+    color: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Quantum Lab Alerts */
+.theme-quantum-lab .alert {
+    background: var(--quantum-lab-accent);
+    border-left: 4px solid var(--quantum-lab-primary);
+    color: var(--quantum-lab-dark);
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.theme-quantum-lab .alert-success {
+    background: #D1FAE5;
+    border-left-color: #059669;
+    color: #065F46;
+}
+
+.theme-quantum-lab .alert-warning {
+    background: #FEF3C7;
+    border-left-color: #D97706;
+    color: #92400E;
+}
+
+.theme-quantum-lab .alert-error {
+    background: #FEE2E2;
+    border-left-color: #DC2626;
+    color: #991B1B;
+}
+
+/* Quantum Lab Code Blocks */
+.theme-quantum-lab code {
+    background: var(--quantum-lab-accent);
+    color: var(--quantum-lab-dark);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.theme-quantum-lab pre {
+    background: var(--quantum-lab-grid);
+    border: 1px solid var(--quantum-lab-primary);
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* Quantum Lab Loading */
+.theme-quantum-lab .loading-spinner {
+    border-color: var(--quantum-lab-grid);
+    border-top-color: var(--quantum-lab-primary);
+}
+
+/* Quantum Lab Tooltips */
+.theme-quantum-lab .tooltip {
+    background: var(--quantum-lab-dark);
+    color: #FFFFFF;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Quantum Lab Professional Grid */
+.theme-quantum-lab .professional-grid {
+    background-image: 
+        linear-gradient(var(--quantum-lab-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--quantum-lab-grid) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Quantum Lab Scrollbar */
+.theme-quantum-lab ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.theme-quantum-lab ::-webkit-scrollbar-track {
+    background: var(--quantum-lab-grid);
+}
+
+.theme-quantum-lab ::-webkit-scrollbar-thumb {
+    background: var(--quantum-lab-primary);
+    border-radius: 5px;
+}
+
+.theme-quantum-lab ::-webkit-scrollbar-thumb:hover {
+    background: var(--quantum-lab-secondary);
+}
