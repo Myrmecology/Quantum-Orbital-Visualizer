@@ -1,0 +1,185 @@
+/* =========================================
+   Deep Space Theme
+   Dark cosmic theme with blue/purple accents
+   ========================================= */
+
+/* Deep Space Color Palette */
+:root {
+    --deep-space-bg: #000814;
+    --deep-space-primary: #4CC9F0;
+    --deep-space-secondary: #F72585;
+    --deep-space-accent: #7209B7;
+    --deep-space-grid: #1B263B;
+    --deep-space-glow: rgba(76, 201, 240, 0.8);
+}
+
+/* Deep Space Body */
+.theme-deep-space {
+    background: linear-gradient(180deg, #000814 0%, #1B263B 100%);
+    color: #E0E0E0;
+}
+
+/* Deep Space Cards */
+.theme-deep-space .card {
+    background: linear-gradient(135deg, #1B263B 0%, #0A0E27 100%) !important;
+    border: 2px solid var(--deep-space-primary) !important;
+    box-shadow: 
+        0 4px 12px rgba(76, 201, 240, 0.2),
+        inset 0 0 20px rgba(76, 201, 240, 0.05);
+}
+
+.theme-deep-space .card:hover {
+    box-shadow: 
+        0 8px 24px rgba(76, 201, 240, 0.3),
+        inset 0 0 30px rgba(76, 201, 240, 0.1);
+    border-color: var(--deep-space-secondary);
+}
+
+/* Deep Space Headers */
+.theme-deep-space h1,
+.theme-deep-space h2,
+.theme-deep-space h3,
+.theme-deep-space h4 {
+    color: var(--deep-space-primary);
+    text-shadow: 0 0 10px var(--deep-space-glow);
+}
+
+/* Deep Space Buttons */
+.theme-deep-space button {
+    background: linear-gradient(135deg, var(--deep-space-primary), var(--deep-space-accent)) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
+}
+
+.theme-deep-space button:hover {
+    background: linear-gradient(135deg, var(--deep-space-secondary), var(--deep-space-accent)) !important;
+    box-shadow: 0 6px 20px rgba(247, 37, 133, 0.5);
+}
+
+/* Deep Space Inputs */
+.theme-deep-space input {
+    background: rgba(10, 14, 39, 0.8) !important;
+    border: 2px solid var(--deep-space-primary) !important;
+    color: var(--deep-space-primary) !important;
+    box-shadow: inset 0 0 10px rgba(76, 201, 240, 0.1);
+}
+
+.theme-deep-space input:focus {
+    border-color: var(--deep-space-secondary) !important;
+    box-shadow: 
+        inset 0 0 15px rgba(247, 37, 133, 0.2),
+        0 0 10px rgba(247, 37, 133, 0.5);
+}
+
+/* Deep Space Sliders */
+.theme-deep-space .rc-slider-track {
+    background: linear-gradient(90deg, var(--deep-space-primary), var(--deep-space-accent)) !important;
+    box-shadow: 0 0 10px var(--deep-space-glow);
+}
+
+.theme-deep-space .rc-slider-handle {
+    border: 3px solid var(--deep-space-primary) !important;
+    background: radial-gradient(circle, var(--deep-space-bg), var(--deep-space-grid)) !important;
+    box-shadow: 0 0 15px var(--deep-space-glow);
+}
+
+/* Deep Space Tabs */
+.theme-deep-space .tab {
+    background: var(--deep-space-grid) !important;
+    color: #888 !important;
+}
+
+.theme-deep-space .tab--selected {
+    background: var(--deep-space-bg) !important;
+    color: var(--deep-space-primary) !important;
+    border-bottom: 3px solid var(--deep-space-primary) !important;
+    box-shadow: 0 -3px 10px rgba(76, 201, 240, 0.3);
+}
+
+/* Deep Space Stars Background */
+.theme-deep-space::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 80%, white, transparent);
+    background-size: 200% 200%;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: stars-twinkle 10s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes stars-twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Deep Space Glow Effect */
+.theme-deep-space .glow-effect {
+    box-shadow: 
+        0 0 20px var(--deep-space-glow),
+        0 0 40px rgba(114, 9, 183, 0.5);
+    animation: deep-space-pulse 3s ease-in-out infinite;
+}
+
+@keyframes deep-space-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 15px var(--deep-space-glow),
+            0 0 30px rgba(114, 9, 183, 0.3);
+    }
+    50% {
+        box-shadow: 
+            0 0 25px var(--deep-space-glow),
+            0 0 50px rgba(114, 9, 183, 0.6);
+    }
+}
+
+/* Deep Space Nebula Accent */
+.theme-deep-space .nebula-accent {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(114, 9, 183, 0.3) 0%,
+        rgba(247, 37, 133, 0.2) 50%,
+        transparent 100%
+    );
+}
+
+/* Deep Space Links */
+.theme-deep-space a {
+    color: var(--deep-space-primary);
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--deep-space-glow);
+    transition: all 0.3s ease;
+}
+
+.theme-deep-space a:hover {
+    color: var(--deep-space-secondary);
+    text-shadow: 0 0 10px rgba(247, 37, 133, 0.8);
+}
+
+/* Deep Space Borders */
+.theme-deep-space hr {
+    border-color: var(--deep-space-primary);
+    box-shadow: 0 0 5px var(--deep-space-glow);
+}
+
+/* Deep Space Loading */
+.theme-deep-space .loading-spinner {
+    border-color: rgba(76, 201, 240, 0.2);
+    border-top-color: var(--deep-space-primary);
+    box-shadow: 0 0 20px var(--deep-space-glow);
+}
