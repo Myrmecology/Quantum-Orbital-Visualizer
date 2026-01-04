@@ -1,5 +1,7 @@
 # Quantum Orbital Visualizer
 
+# FOR A VIDEO DEMO PLEASE VISIT: https://www.youtube.com/watch?v=PyECca1FuHk
+
 An interactive 3D quantum mechanics visualization application that brings the Schrödinger equation to life in your browser. Explore hydrogen atom wave functions, probability distributions, and quantum phenomena with real-time controls and stunning visualizations.
 
 ## Overview
